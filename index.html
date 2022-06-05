@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skillbox</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,12 +36,15 @@
               </li>
             </ul>
           </nav>
-          <button class="search">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <form class="search-form">
+            <input class="search-input" type="text" placeholder="Поиск по сайту">
+            <button class="search-button" type="submit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
           <a class="header__button" href="">Вход</a>
         </div>
       </div>
@@ -58,8 +62,13 @@
             <ul class="header__music-list">
               <li class="header__music-item">
                 <button class="play_btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/>
+                    <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                    <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
                   </svg>
                 </button>
                 <div class="header__music-text">
@@ -69,8 +78,13 @@
               </li>
               <li class="header__music-item">
                 <button class="play_btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+                  <svg class="svg-play" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/> 
+                  </svg>
+                  <svg class="svg-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/>
+                    <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                    <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
                   </svg>
                 </button>
                 <div class="header__music-text">
@@ -120,9 +134,14 @@
                   <p class="section-podcast__card-author">Дмитрий Гутенберг</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -172,9 +191,14 @@
                   <p class="section-podcast__card-author">Дмитрий Гутенберг</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -224,9 +248,14 @@
                   <p class="section-podcast__card-author">Анна Васильеваг</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -276,9 +305,14 @@
                   <p class="section-podcast__card-author">Пётр Дмитриевский</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -328,9 +362,14 @@
                   <p class="section-podcast__card-author">Пётр Дмитриевский</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -380,9 +419,14 @@
                   <p class="section-podcast__card-author">Татьяна Флеганова</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -432,9 +476,14 @@
                   <p class="section-podcast__card-author">Пётр Дмитриевский</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -484,9 +533,14 @@
                   <p class="section-podcast__card-author">Татьяна Флеганова</p>
                 </div>
                 <button class="section-podcast__card-play-button">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="svg-play" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                  <svg class="svg-pause" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <rect x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
+                    <rect x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/>
                   </svg>
                 </button>
               </div>
@@ -525,5 +579,23 @@
       <a class="section-podcast__button" href="">Ещё подкасты</a>
     </div>
   </section>
+  <section class="section-broadcast">
+    <div class="container section-broadcast__container">
+      <div class="section-broadcast__left">
+        <h2 class="section-broadcast__h2">Передачи</h2>
+        <div class="section-broadcast__left-author">
+          <p>Автор:</p>
+          <select class="js-choice">
+            <option value="">Дмитрий Гутенберг</option>
+            <option value="">Татьяна Флеганова</option>
+            <option value="">Анна Васильева</option>
+            <option value="">Пётр Дмитриевский</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/choices.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
