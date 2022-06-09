@@ -1,20 +1,15 @@
-const element = document.querySelector('.js-choice');
+const element = document.querySelector('select');
 
 const choices = new Choices(element, {
     searchEnabled : false,
     itemSelectText: ""
 })
 
-// document.querySelector('.play_btn').addEventListener('click', function(e) {
-//     e.target.closest('.play_btn').classList.toggle('play_btn--toggle');
-//   })
-
-
 let myButtons = document.querySelectorAll('.play_btn');
 myButtons.forEach(function(btn) {
 
     btn.addEventListener('click', () => {
-      myButtons.forEach(btn.classList.toggle('play_btn--toggle'))
+        btn.classList.toggle('play_btn--toggle')
     });
 
 });
@@ -23,7 +18,17 @@ let actionButtons = document.querySelectorAll('.section-podcast__card-play-butto
 actionButtons.forEach(function(btn) {
 
     btn.addEventListener('click', () => {
-        actionButtons.forEach(btn.classList.toggle('play_btn--toggle'))
+        btn.classList.toggle('play_btn--toggle')
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    document.getElementById('search-form-send').addEventListener('click', (e) => {
+        document.getElementById('search-form-input').classList.toggle('search-form__input-show')
+    })
+
+    document.getElementById('search-form').addEventListener('submit', (e) => {
+        e.preventDefault()
+    })
+})
