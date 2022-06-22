@@ -2,7 +2,7 @@ const element = document.querySelector('select');
 
 const choices = new Choices(element, {
     searchEnabled : false,
-    itemSelectText: ""
+    itemSelectText: "",
 })
 
 let myButtons = document.querySelectorAll('.play_btn');
@@ -31,4 +31,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     document.getElementById('search-form').addEventListener('submit', (e) => {
         e.preventDefault()
     })
-})
+
+    document.querySelector('.accordion-head').addEventListener('click', () => {
+        document.querySelector('.accordion-head').classList.toggle('accordion-open')
+    })
+    
+});
