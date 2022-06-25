@@ -5,6 +5,14 @@ const choices = new Choices(element, {
     itemSelectText: "",
 })
 
+$( function() {
+    $( "#accordion" ).accordion({
+      active: true,
+      collapsible: true,
+      heightStyle: 'content'
+    });
+});
+
 let myButtons = document.querySelectorAll('.play_btn');
 myButtons.forEach(function(btn) {
 
@@ -37,3 +45,39 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
     
 });
+
+// section-guests__info
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.accordion-body__item-button').forEach(function(accBtn) {
+      accBtn.addEventListener('click', function(event) {
+        const path = event.currentTarget.dataset.path
+        document.querySelectorAll('.section-guests__main-right-info').forEach(function(guestInfo) {
+            guestInfo.classList.remove('guest-info-active')
+        })
+        if (path) {
+            document.querySelector('.section-guests__main-right-info').classList.add('guest-info-active')
+        } else {
+            document.querySelector('.section-guests__main-right-img').src = 'img/anonymous.png'
+        }
+        
+        
+        let necessaryGuestInfo = document.querySelector(`[data-div="${path}"]`)
+        let currentGuestName = document.querySelector('.section-guests__main-right-name')
+        let currentGuestInfo = document.querySelector('.section-guests__main-right-text')
+        let currentGuestImg = document.querySelector('.section-guests__main-right-img')
+        
+        currentGuestName.textContent = necessaryGuestInfo.querySelector('h3').textContent
+        currentGuestInfo.textContent = necessaryGuestInfo.querySelector('p').textContent
+        currentGuestImg.src = necessaryGuestInfo.querySelector('img').src
+      })
+    })
+  })
+
+  $(document).ready(function() {
+    $('.accordion-body__item-button').on('click', acc_func);
+  });
+  function acc_func(){
+    $('.accordion-body__item-button').removeClass('accordion-body__item-button-active')
+    $(this).addClass('accordion-body__item-button-active')
+  }
