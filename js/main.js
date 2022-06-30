@@ -81,3 +81,21 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.accordion-body__item-button').removeClass('accordion-body__item-button-active')
     $(this).addClass('accordion-body__item-button-active')
   }
+
+$(".section-playlist__card-link").focus(function(){
+    $(this).parent().css('background-color', '#AA9DFA')
+}
+);
+
+$(".section-playlist__card-link").focusout(function(){
+    $(this).parent().css('background-color', 'transparent')
+}
+);
+
+$(document).ready(function(){
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+    });
+});
