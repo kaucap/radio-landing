@@ -92,10 +92,26 @@ $(".section-playlist__card-link").focusout(function(){
 }
 );
 
-$(document).ready(function(){
+// $(document).ready(function(){
+//     $('.slider').slick({
+//         infinite: true,
+//         slidesToShow: 4,
+//         slidesToScroll: 1,
+//     });
+// });
+
+let sliderMedia = window.matchMedia('(max-width: 1200px)')
+
+if (sliderMedia.matches) {
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+    });
+} else {
     $('.slider').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
     });
-});
+}
