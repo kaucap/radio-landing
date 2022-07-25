@@ -252,6 +252,194 @@ ul {
     align-items: center;
 }
 
+#entry {
+    display: none;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+  
+#entry.open {
+    display: block;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.5);
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.popup_open {
+    display: block;
+}
+
+.popup__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 824px;
+    transform: translate(-50%, -50%);
+    background: var(--text);
+    border-radius: 10px;
+}
+
+.popup__h3 {
+    margin-bottom: 17px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    color: white;
+}
+
+.popup__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.popup__text-link:focus-visible {
+    outline: 1px solid var(--button);
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    border-bottom: 1px solid rgba(230, 232, 236, 0.4);
+}
+
+.popup__links {
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.popup__list {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.popup__item,
+.popup__item-vk {
+    margin-right: 40px;
+}
+
+.popup__item svg path,
+.popup__item-vk svg rect {
+    transition: fill .3s ease;
+}
+
+.popup__item:hover svg path,
+.popup__item-vk:hover svg rect {
+    fill: var(--button);
+}
+
+.popup__item a:focus-visible svg path,
+.popup__item-vk a:focus-visible svg path {
+    fill: var(--focus_light);
+}
+
+.popup__item a:focus-visible,
+.popup__item-vk:focus-visible {
+    outline: 2px solid var(--button);
+}
+
+.popup__item:active svg path,
+.popup__item-vk a:active svg path  {
+    fill: var(--active);
+}
+
+.popup__input {
+    padding: 25px 32px;
+    margin-bottom: 30px;
+    width: 435px;
+    height: 70px;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--text_gray);
+    background-color: var(--text);
+}
+
+.popup__button {
+    padding: 24px 52px;
+    max-width: 167px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    background-color: var(--button);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.popup__button:hover {
+    background-color: var(--focus_light);
+}
+
+.popup__button:focus-visible {
+    outline: 3px solid var(--button);
+    background-color: var(--focus_light);
+}
+
+.popup__button:active {
+    background-color: var(--active);
+}
+
+.popup__wrapper {
+    position: relative;
+    padding: 30px 30px 60px 60px;
+}
+
+.popup__button-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.popup__button-close svg path,
+.popup__button-close svg circle {
+    transition: stroke .3s ease;
+}
+
+.popup__button-close:hover svg path,
+.popup__button-close:hover svg circle {
+    stroke: var(--button);
+}
+
+.popup__button-close:focus-visible {
+    outline: 2px solid var(--button);
+}
+
+.popup__button-close:focus-visible svg path,
+.popup__button-close:focus-visible svg circle {
+    stroke: var(--focus_light);
+}
+
+.popup__button-close:active svg path,
+.popup__button-close:active svg circle {
+    stroke: var(--active);
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
 .header__list {
     display: flex;
     align-items: center;
@@ -1809,7 +1997,7 @@ cursor: pointer;
 
 .textarea {
     padding: 30px 32px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 100%;
     min-height: 150px;
     resize: none;
@@ -1855,7 +2043,7 @@ cursor: pointer;
 .form__button {
     max-width: 212px;
     padding: 25px 54px;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -1953,7 +2141,7 @@ cursor: pointer;
 
 .footer__social-list {
     display: flex;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .footer__social-item {
@@ -2192,8 +2380,14 @@ cursor: pointer;
     padding-bottom: 188px;
    }
 
+   .section-playlist__left {
+    max-width: 100%;
+   }
+
    .section-playlist__category-list {
     columns: 2;
+    column-gap: 35px;
+    max-width: fit-content;
    }
 
    .section-playlist__list {
@@ -2278,4 +2472,11 @@ cursor: pointer;
     max-width: 100%;
    }
 
+   .form__input label:first-child {
+    margin-right: 30px;
+   }
 } 
+
+@media (max-width: 920px) {
+    
+}
